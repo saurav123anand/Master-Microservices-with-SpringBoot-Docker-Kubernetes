@@ -37,6 +37,8 @@ public class AccountsServiceImpl implements IAccountsService {
         Customer savedCustomer = customerRepository.save(customer);
         accountRepository.save(createNewAccount(savedCustomer));
     }
+
+
     /**
      * @param customer - Customer Object
      * @return the new account details
@@ -51,5 +53,11 @@ public class AccountsServiceImpl implements IAccountsService {
         newAccount.setAccountType(AccountsConstants.SAVINGS);
         newAccount.setBranchAddress(AccountsConstants.ADDRESS);
         return newAccount;
+    }
+
+
+    @Override
+    public CustomerDto fetchAccount(String mobileNumber) {
+        return null;
     }
 }
