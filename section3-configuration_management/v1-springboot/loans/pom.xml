@@ -88,18 +88,13 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.5</version>
 				<configuration>
-					<image>
-						<name>sauravdocker321/${project.artifactId}:s2</name>
-					</image>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+					<to>
+						<image>sauravdocker321/${project.artifactId}:s3</image>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
